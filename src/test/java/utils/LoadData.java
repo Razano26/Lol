@@ -12,7 +12,7 @@ import static utils.UrlPaths.CREATE_URL;
 public class LoadData {
 
     public static final String SRC_TEST_RESOURCES_DATASETS_CREATE = "src/test/resources/datasets/create/";
-    public static final String SRC_TEST_RESOURCES_DATASETS_TEAMS = "src/test/resources/datasets/create/";
+    public static final String SRC_TEST_RESOURCES_DATASETS_TEAMS = "src/test/resources/datasets/teams/";
 
     public static void createChampionsAtInit(HttpClient httpClient) throws IOException {
         httpClient.post(CREATE_URL, new String(Files.readAllBytes(Paths.get(SRC_TEST_RESOURCES_DATASETS_CREATE + "create_nasus.json"))));

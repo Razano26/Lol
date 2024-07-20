@@ -16,7 +16,7 @@ class UseCase3IntegrationTest {
 
     Javalin app = new ServerJava().javalinApp(); // inject any dependencies you might have
 
-    private static final String SRC_TEST_RESOURCES_DATASETS = "src/test/resources/datasets/team/";
+    private static final String SRC_TEST_RESOURCES_DATASETS = "src/test/resources/datasets/teams/";
     @Test
     void test_begin_game_ok() throws IOException {
 

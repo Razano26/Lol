@@ -8,18 +8,6 @@
     {
       "championName": "Champ7",
       "lane": "BOT"
-    },
-    {
-      "championName": "Champ8",
-      "lane": "JUNGLER"
-    },
-    {
-      "championName": "Champ9",
-      "lane": "BOT"
-    },
-    {
-      "championName": "Champ10",
-      "lane": "MID"
     }
   ]
 }
