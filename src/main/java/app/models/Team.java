@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Team {
@@ -43,13 +44,13 @@ public class Team {
     }
 
     public boolean hasDuplicates() {
-        Set<String> championNames = new HashSet<>();
-        for (ChampionDistribution cd : championsDistribution) {
-            if (!championNames.add(cd.getChampionName().toLowerCase())) {
-                return true;
-            }
+        if (championsDistribution == null) {
+            return false;
         }
-        return false;
+        Set<String> uniqueChampions = championsDistribution.stream()
+                .map(ChampionDistribution::getChampionName)
+                .collect(Collectors.toSet());
+        return uniqueChampions.size() != championsDistribution.size();
     }
 
     public boolean containsChampion(String championName) {

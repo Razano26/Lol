@@ -81,7 +81,7 @@ class UseCase2IntegrationTest {
 
         JavalinTest.test(app, (server, client) -> {
             createChampionsAtInit(client);
-            assertThat(client.post(CREATE_TEAM_URL, incomplete).code()).isEqualTo(200);
+            assertThat(client.post(CREATE_TEAM_URL, incomplete).code()).isEqualTo(400);
         });
     }
 
