@@ -57,7 +57,7 @@ class UseCase1_2IntegrationTest {
         JavalinTest.test(app, (server, client) -> {
             createChampionsAtInit(client);
             Response response = client.post(MODIFY_URL, jsonContent);
-            assertThat(response.code()).isEqualTo(404);
+            assertThat(response.code()).isEqualTo(400);
         });
     }
 }
